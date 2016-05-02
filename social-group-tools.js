@@ -35,39 +35,5 @@
                 } );
             }
 		});
-		// Add rendezvous Button to Visual Editor Toolbar
-		editor.addButton('rendezvous', {
-            title: 'Rendezvous',
-            image: url + '/rendezvous.png',
-            onclick: function() {
-                // Open window
-                editor.windowManager.open( {
-	                title: 'Time and Place',
-	                body: [
-	                {
-	                    type: 'textbox',
-	                    name: 'description',
-	                    label: 'Description'
-	                },
-                    {
-                       type: 'textbox',
-                       name: 'postcode',
-                       label: 'Postcode'
-                    },
-                    {
-                       type: 'textbox',
-                       name: 'time',
-                       label: 'Time'
-                    }                           
-                    ],
-                    onsubmit: function( e ) {
-                        // Insert content when the window form is submitted
-                        editor.insertContent( '[rendezvous Description=\"' + e.data.description + 
-                        		' \" Postcode=\"' +e.data.postcode + ' \" Time=\"' + e.data.time + '\" ]');
-                    }
-
-                } );
-            }
-		});
 	});
 })();

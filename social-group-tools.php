@@ -68,7 +68,6 @@ class Social_Group_Tools {
 	function add_tinymce_toolbar_button( $buttons ) {
 	
 		array_push( $buttons, '|', 'hidden_contact' );
-		array_push( $buttons, '|', 'rendezvous' );
 		return $buttons;
 	}
 
